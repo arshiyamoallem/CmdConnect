@@ -30,14 +30,14 @@ Run the program:
 
  
 ## File Structure
-
+```
 📁 CmdConnect/
-- ├── main.c             # Entry point and UI logic
-- ├── sm_utils.c         # Core functions for posts and friends
-- ├── sm_structs.h       # Data structure definitions (user_t, post_t, etc.)
-- ├── sm_utils.h         # Function declarations
-- ├── README.md          # You're reading it!
-
+├── main.c             # Entry point and UI logic
+├── sm_utils.c         # Core functions for posts and friends
+├── sm_structs.h       # Data structure definitions (user_t, post_t, etc.)
+├── sm_utils.h         # Function declarations
+├── README.md          # You're reading it!
+```
 ## Sample:
 
 ```
