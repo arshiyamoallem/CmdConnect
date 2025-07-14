@@ -41,7 +41,7 @@ Run the program:
 ## Sample:
 
 ========================================
-      **Welcome to CmdConnect**
+      Welcome to CmdConnect
 ========================================
 
 1.  Create Account
@@ -52,3 +52,4 @@ Run the program:
 6.  Quit
 
 Choose an option:
+
