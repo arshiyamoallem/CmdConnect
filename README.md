@@ -40,9 +40,10 @@ Run the program:
 
 ## Sample:
 
-= ========================================                                                                                                                                                   
+```
+========================================                                                                                                                                                   
          Welcome to CmdConnect                                                                                                                                           
-= ========================================
+========================================
 
 1.  Create Account
 2.  Change Password
@@ -52,4 +53,4 @@ Run the program:
 6.  Quit
 
 Choose an option:
-
+```
