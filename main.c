@@ -46,14 +46,15 @@ int main() {
                 if (user) {
                     char attempt[15];
                     int tries = 3;
+                    
                     while (tries--) {
                         printf("Enter your password: ");
                         scanf("%s", attempt);
                         if (strcmp(attempt, user->password) == 0) {
                             printf("Enter new password: ");
                             scanf("%s", pwd);
-                            strncpy(user->password, pwd, 14);
-                            user->password[14] = '\0';
+                            strncpy(user->password, pwd, 30);
+                            user->password[30] = '\0';
                             printf("Password updated!\n\n");
                             break;
                         } else {
@@ -140,11 +141,6 @@ int main() {
                                 printf("Cannot add yourself as a friend.\n");
                                 continue;
                             }
-                            user_t *friend_user = lookup_user(users, friend_name);
-                            if (friend_user) {
-                                printf("'%s' is already a registered username.\n");
-                                continue;
-                            }
                             friend_t *curr = user->friends;
                             bool already_friend = false;
                             while (curr != NULL) {
@@ -188,7 +184,7 @@ int main() {
                         if (remove_friend(user, index - 1)) { // zero-based index internally
                             printf("Friend removed.\n\n");
                         } else {
-                            printf("Invalid friend number.\n\n");
+                            printf("Invalid friend number. Try again.\n\n");
                         }
 
                     } else if (choice == 3) {
