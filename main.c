@@ -23,8 +23,16 @@ int main() {
 
         switch (choice) {
             case 1:
-                printf("Enter new username: ");
-                scanf("%s", uname);
+                while (1) {
+                    printf("Enter new username: ");
+                    scanf("%s", uname);
+
+                    if (lookup_user(users, uname)) { // the input is the same name as another registered name in the system
+                        printf("Username '%s' already exists. Please choose another one.\n\n", uname);
+                        continue;
+                    }
+                    break;
+                }
                 printf("Enter password: ");
                 scanf("%s", pwd);
                 users = register_user(users, uname, pwd);
@@ -116,9 +124,43 @@ int main() {
                         continue;
                     }
 
+                    while (getchar() != '\n'); // flush newline leftover from scanf
+
                     if (choice == 1) {
-                        printf("Friend's username: ");
-                        scanf("%s", friend_name);
+                        while (1) {
+                            printf("Friend's username: ");
+                            fgets(friend_name, sizeof(friend_name), stdin);
+                            friend_name[strcspn(friend_name, "\n")] = '\0';
+                            
+                            if (strlen(friend_name) == 0) {
+                            printf("You must enter something.\n\n");
+                            continue;
+                            }
+                            if (strcmp(friend_name, user->username) == 0) {
+                                printf("Cannot add yourself as a friend.\n");
+                                continue;
+                            }
+                            user_t *friend_user = lookup_user(users, friend_name);
+                            if (friend_user) {
+                                printf("'%s' is already a registered username.\n");
+                                continue;
+                            }
+                            friend_t *curr = user->friends;
+                            bool already_friend = false;
+                            while (curr != NULL) {
+                                if (strcmp(curr->username, friend_name) == 0) {
+                                already_friend = true;
+                                break;
+                                }
+                                curr = curr -> next;
+                            }
+
+                            if (already_friend) {
+                                printf("Already added as a friend\n");
+                                continue;
+                            }
+                            break;
+                        }
                         add_new_friend(user, friend_name);
                         printf("Friend added.\n\n");
 
