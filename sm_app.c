@@ -1,5 +1,3 @@
-// Redesigned Social Media App Implementation
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -222,5 +220,3 @@ void print_ui_menu() {
     printf("6.  Quit\n");
     printf("\nChoose an option: ");
 }
-
-
