@@ -1,6 +1,7 @@
-# CmdConnect - Social-Media-App (console/terminal/text-based)
+# CmdConnect - Social-Media-App (text-based)
 
-CmdConnect is a simple, text-based social media application. Users can create accounts, change their passwords, manage posts and friends, and view their post timeline—all from a clean terminal interface.
+CmdConnect is a simple, text-based social media application. 
+Users can create accounts, change their passwords, manage posts and friends, and view their post timeline—all from a clean terminal interface.
 
 ## Features
 
@@ -25,9 +26,10 @@ Open your terminal in the project folder and run:
 gcc main.c sm_app.c sm_utils.c -o cmdconnect
 ```
 
+```bash
 Run the program:
 ./cmdconnect    # or .\cmdconnect.exe on Windows
-
+```
  
 ## File Structure
 ```
