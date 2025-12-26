@@ -20,10 +20,10 @@ Requirements:
 
 ## 🛠️ Compiling
 
-Open your terminal in the project folder and run:
+Open your terminal in the src folder and run:
 
 ```bash
-gcc main.c sm_app.c sm_utils.c -o cmdconnect
+gcc main.c sm_app.c -o cmdconnect
 ```
 
 ```bash
@@ -39,6 +39,8 @@ Run the program:
 ├── sm_structs.h       # Data structure definitions (user_t, post_t, etc.)
 ├── sm_utils.h         # Function declarations
 ├── README.md          # You're reading it!
+├── LICENSE            # For Licensing purposes
+├── .gitignore         # Ignore redundant files from project
 ```
 ## Sample:
 
