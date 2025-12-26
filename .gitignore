@@ -1,1 +1,6 @@
-./src/cmdconnect
+# Object files
+*.o
+
+# executable extensions
+*.out
+*.exe
